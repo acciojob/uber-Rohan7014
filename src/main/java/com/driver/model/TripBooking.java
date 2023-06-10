@@ -14,6 +14,38 @@ public class TripBooking {
     @Enumerated(value = EnumType.STRING)
     private TripStatus status;
     private int bill;
+    @ManyToOne
+    @JoinColumn
+    private Driver driver;
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
+    public Customer getCustomer() {
+        return customer;
+    }
+
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
+    }
+
+    @ManyToOne
+    @JoinColumn
+    private Customer customer;
+
+    public TripBooking() {
+    }
+
+    public TripBooking(String fromLocation, String toLocation, int distanceInKm) {
+        this.fromLocation = fromLocation;
+        this.toLocation = toLocation;
+        this.distanceInKm = distanceInKm;
+    }
 
     public int getTripBookingId() {
         return tripBookingId;

@@ -1,5 +1,7 @@
 package com.driver.model;
 
+import net.bytebuddy.asm.Advice;
+
 import javax.persistence.*;
 
 @Entity
@@ -10,6 +12,14 @@ public class Admin {
     private int userId;
     private String userName;
     private String password;
+
+    public Admin() {
+    }
+
+    public Admin(String userName, String password) {
+        this.userName = userName;
+        this.password = password;
+    }
 
     public int getUserId() {
         return userId;

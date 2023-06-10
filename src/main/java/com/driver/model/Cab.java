@@ -14,6 +14,22 @@ public class Cab {
     @JoinColumn
     private Driver driver;
 
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void setDriver(Driver driver) {
+        this.driver = driver;
+    }
+
+    public Cab() {
+    }
+
+    public Cab(int perKmRate, boolean available) {
+        this.perKmRate = perKmRate;
+        this.available = available;
+    }
+
     public int getId() {
         return Id;
     }
