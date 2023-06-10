@@ -36,7 +36,6 @@ public class Cab {
         Available = available;
         this.driver = driver;
     }
-
     public int getId() {
         return Id;
     }
@@ -53,7 +52,7 @@ public class Cab {
         this.perKmRate = perKmRate;
     }
 
-    public boolean isAvailable() {
+    public boolean getAvailable() {
         return Available;
     }
 
