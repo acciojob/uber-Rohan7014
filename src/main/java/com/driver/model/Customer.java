@@ -15,6 +15,16 @@ public class Customer {
     @OneToMany(mappedBy = "customer",cascade = CascadeType.ALL)
     List<TripBooking> tripBookingList=new ArrayList<>();
 
+    public Customer() {
+    }
+
+    public Customer(int customerId, String mobile, String password, List<TripBooking> tripBookingList) {
+        this.customerId = customerId;
+        this.mobile = mobile;
+        this.password = password;
+        this.tripBookingList = tripBookingList;
+    }
+
     public Customer(String mobile, String password) {
         this.mobile = mobile;
         this.password = password;

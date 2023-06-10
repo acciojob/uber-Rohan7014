@@ -1,7 +1,5 @@
 package com.driver.model;
 
-import net.bytebuddy.asm.Advice;
-
 import javax.persistence.*;
 
 @Entity
@@ -9,32 +7,33 @@ import javax.persistence.*;
 public class Admin {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int userId;
-    private String userName;
+    private int AdminId;
+    private String Username;
     private String password;
 
     public Admin() {
     }
 
-    public Admin(String userName, String password) {
-        this.userName = userName;
+    public Admin(String Username, String password) {
+        this.Username = Username;
         this.password = password;
     }
 
-    public int getUserId() {
-        return userId;
+
+    public int getAdminId() {
+        return AdminId;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setAdminId(int adminId) {
+        this.AdminId = adminId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getUsername() {
+        return Username;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setUsername(String username) {
+        this.Username = username;
     }
 
     public String getPassword() {
