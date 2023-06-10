@@ -2,6 +2,7 @@ package com.driver.controllers;
 
 import com.driver.model.Customer;
 import com.driver.model.TripBooking;
+import com.driver.services.CustomerService;
 import com.driver.services.impl.CustomerServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -12,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/customer")
 public class CustomerController {
 	@Autowired
-	CustomerServiceImpl customerServiceImpl;
+	CustomerService customerServiceImpl;
 	@PostMapping("/register")
 	public ResponseEntity<Void> registerCustomer(@RequestBody Customer customer){
 		customerServiceImpl.register(customer);
